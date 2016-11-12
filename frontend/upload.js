@@ -22,17 +22,15 @@ $(function() {
         $.ajax({
             url: 'upload',
             type: 'POST',
-            xhr: function() {
-                var myXhr = $.ajaxSettings.xhr();
-                if(myXhr.upload){
-                    myXhr.upload.addEventListener('progress',progressHandlingFunction, false); // For handling the progress of the upload
-                }
-                return myXhr;
-            },
             //Ajax events
-            beforeSend: beforeSendHandler,
-            success: completeHandler,
-            error: errorHandler,
+            //beforeSend: beforeSendHandler,
+            success: function() {
+                console.log("succeeded");
+            },
+            error: function(req, e) {
+                console.log(e);
+                console.log("error!");
+            },
             // Form data
             data: formData,
             //Options to tell jQuery not to process data or worry about content-type.
