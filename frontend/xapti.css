@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
 }
-a {
+.top a {
   color: #595959;
   text-decoration: none; 
 }
@@ -69,20 +69,21 @@ input[type="text"], input[type="number"], input[type="password"], input[type="em
     padding: 5px;
     outline: none;
 }
-input[type="submit"].final {
+button.final {
     position: absolute;
     background-color: #4286f4;
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0%);
 }
-input[type="submit"].final:hover {
+button.final:hover {
     background-color: #1e74ff;
 }
-input[type="submit"].final:active {
+button.final:active {
     background-color: blue;
 }
-input[type="submit"] {
+button {
+    text-decoration: none; 
     color: white;
     padding: 5px;
     height: 30px;
@@ -97,10 +98,10 @@ input[type="submit"] {
     outline: none;
     cursor: pointer;
 }
-input[type="submit"]:hover {
+button:hover {
     background-color: #e60000;
 }
-input[type="submit"]:active {
+button:active {
     background-color: #990000;
 }
 .number {

@@ -1,16 +1,16 @@
 <html>
     <head>
         <title>Xapti - one time download hosting</title>
-        <script type="text/javascript" src="jquery.js"></script>
-        <script type="text/javascript" src="background.js"></script>
-        <script type="text/javascript" src="upload.js"></script>
+        <script type="text/javascript" src="/jquery.js"></script>
+        <script type="text/javascript" src="/background.js"></script>
+        <script type="text/javascript" src="/upload.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
-        <link rel="stylesheet" type="text/css" href="xapti.css">
+        <link rel="stylesheet" type="text/css" href="/xapti.css">
     </head>
     <body>
         <div class="top">
             <a href="/">
-                <img src="folder-blue.png" width="30"/>
+                <img src="/folder-blue.png" width="30"/>
                 <span>XAPTI</span>
             </a>
         </div>
@@ -20,7 +20,7 @@
                     <div class="descriptor"><span class="number">1</span> Choose the file you want to share!</div><br>
                     <div class="sub">
                         <div class="fileHeader">FILE</div>
-                        <div class="selected">&nbsp;</div><input type="submit" class="selector" value="Select"/>
+                        <div class="selected">&nbsp;</div><button class="selector">Select</button>
                         <input type="file" name="file" class="fileSelect" style="display:none">
                     </div>
                 </div><br>
@@ -28,7 +28,7 @@
                     <div class="descriptor"><span class="number">2</span> Choose a number of downloads!</div><br>
                     <div class="sub">
                         <input type="number" placeholder="# downloads" name="download" class="downloadLimit"><br>
-                        <input type="number" placeholder="# hours" name="download" class="downloadLimit">
+                        <input type="number" placeholder="# hours" name="hours" class="downloadLimit">
                     </div>
                 </div><br>
                 <div id="linkChooser">
@@ -38,7 +38,7 @@
                     </div>
                 </div><br>
                 <div id="message">&nbsp;</div>
-                <input type="submit" value="Upload and share!" class="final"/>
+                <button class="final">Upload and share!</button>
             </form>
         </div>
     </body>

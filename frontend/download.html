@@ -1,23 +1,23 @@
 <html>
     <head>
         <title>Xapti - one time download hosting</title>
-        <script type="text/javascript" src="jquery.js"></script>
-        <script type="text/javascript" src="background.js"></script>
-        <script type="text/javascript" src="upload.js"></script>
+        <script type="text/javascript" src="/jquery.js"></script>
+        <script type="text/javascript" src="/background.js"></script>
+        <script type="text/javascript" src="/download.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
-        <link rel="stylesheet" type="text/css" href="xapti.css">
+        <link rel="stylesheet" type="text/css" href="/xapti.css">
     </head>
     <body>
         <div class="top">
             <a href="/">
-                <img src="folder-blue.png" width="30"/>
+                <img src="/folder-blue.png" width="30"/>
                 <span>XAPTI</span>
             </a>
         </div>
         <div class="main">
-            <div class="line"><img src="file.png" height="20"/> <span>File name</span></div>
-            <div class="small">1 download remaining | Uploaded on 11/12/16</div>
-            <input type="submit" class="download" value="Download"/>
+            <div class="line"><img src="/file.png" height="20"/> <span>{{filename}}</span></div>
+            <div class="small"><span class="dNum">{{downloads}}</span> downloads remaining | Expires {{expires}} | Uploaded on {{uploaded}}</div>
+            <button class="download" downloadid="{{id}}">Download</button>
         </div>
     </body>
 </html>
