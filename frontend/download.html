@@ -1,35 +1,23 @@
 <html>
     <head>
-        <title>FileDrop</title>
+        <title>Xapti - one time download hosting</title>
         <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="background.js"></script>
         <script type="text/javascript" src="upload.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
         <link rel="stylesheet" type="text/css" href="xapti.css">
     </head>
     <body>
+        <div class="top">
+            <a href="upload.html">
+                <img src="folder-blue.png" width="30"/>
+                <span>XAPTI</span>
+            </a>
+        </div>
         <div class="main">
-            <div id="fileChooser">
-                <span class="descriptor"><span class="number">1</span> Choose the file you want to share!</span><br>
-                <input type="submit" class="selector" value="Select"/>
-                <div class="sub">
-                    <div class="fileHeader">FILE</div>
-                    <div class="selected"></div>
-                    <input type="file" name="file" class="fileSelect" style="display:none">
-                </div>
-            </div><br>
-            <div id="limitChooser">
-                <div class="descriptor"><span class="number">2</span> Choose a number of downloads!</div><br>
-                <div class="sub">
-                    <input type="number" value="1" placeholder="1" name="download" class="downloadLimit">
-                </div>
-            </div><br>
-            <div id="linkChooser">
-                <div class="descriptor"><span class="number">3</span> Choose a fun link to share!</div><br>
-                <div class="sub">
-                    <input type="text" name="link" placeholder="applepears" class="linkUrl">
-                </div>
-            </div><br>
-            <input type="submit" value="Upload and share!" class="final"/>
+            <div class="line"><img src="file.png" height="20"/> <span>File name</span></div>
+            <div class="small">1 download remaining | Uploaded on 11/12/16</div>
+            <input type="submit" class="download" value="Download"/>
         </div>
     </body>
 </html>

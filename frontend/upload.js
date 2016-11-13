@@ -1,7 +1,4 @@
-backgroundList = ['oceans.jpg', 'thousandislandlake.jpg'];
 $(function() {
-    let randIndex = Math.floor(Math.random() * backgroundList.length);
-    $('body').css('background-image', 'url(backgrounds/' + backgroundList[randIndex] + ')');
     let fileChooser = $("#fileChooser");
     let selectorButton = fileChooser.find(".selector").first();
     let hidden = fileChooser.find(".fileSelect").first();
@@ -24,12 +21,16 @@ $(function() {
             type: 'POST',
             //Ajax events
             //beforeSend: beforeSendHandler,
-            success: function() {
-                console.log("succeeded");
+            success: function(res, status) {
+                if (res.type == "Success") {
+                    window.location = res.message;
+                    return;
+                }
+
+                $("#message").text(res.message);
             },
-            error: function(req, e) {
-                console.log(e);
-                console.log("error!");
+            error: function(req, err) {
+                console.log(err);
             },
             // Form data
             data: formData,

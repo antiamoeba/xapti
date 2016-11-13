@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Upload</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="xapti.css">
+  </head>
+  <body>
+    <div class="title">
+        <img src="folder-blue.png" width="30"/>
+        <span>XAPTI</span>
+    </div>
+    <form id="upload" enctype="multipart/form-data">
+        <input type="file" name="file" class="fileSelect" style="display:none">
+        <div id="limitChooser">
+            <div class="descriptor"><span class="number">1</span> Choose a number of downloads!</div><br>
+            <div class="sub">
+                <input type="number" value="1" placeholder="1" name="download" class="downloadLimit">
+            </div>
+        </div><br>
+        <div id="linkChooser">
+            <div class="descriptor"><span class="number">2</span> Choose a fun link to share!</div><br>
+            <div class="sub">
+                <input type="text" name="link" placeholder="applepears" class="linkUrl">
+            </div>
+        </div><br>
+        <div id="message">&nbsp;</div>
+        <input type="submit" value="Upload and share!" class="final"/>
+    </form>
+  </body>
+
+  <script>
+    window.$ = window.jQuery = require('./jquery.js');
+    require('./renderer.js')
+  </script>
+</html>

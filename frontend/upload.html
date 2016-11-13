@@ -2,14 +2,17 @@
     <head>
         <title>Xapti - one time download hosting</title>
         <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="background.js"></script>
         <script type="text/javascript" src="upload.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
         <link rel="stylesheet" type="text/css" href="xapti.css">
     </head>
     <body>
         <div class="top">
-            <img src="folder-blue.png" width="30"/>
-            <span>XAPTI</span>
+            <a href="upload.html">
+                <img src="folder-blue.png" width="30"/>
+                <span>XAPTI</span>
+            </a>
         </div>
         <div class="main">
             <form id="upload" enctype="multipart/form-data">
@@ -33,6 +36,7 @@
                         <input type="text" name="link" placeholder="applepears" class="linkUrl">
                     </div>
                 </div><br>
+                <div id="message">&nbsp;</div>
                 <input type="submit" value="Upload and share!" class="final"/>
             </form>
         </div>
