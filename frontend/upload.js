@@ -16,6 +16,7 @@ $(function() {
     });
     $(".final").click(function() {
         let formData = new FormData(form[0]);
+        $("#message").text("Loading...");
         $.ajax({
             url: 'upload',
             type: 'POST',
@@ -30,7 +31,7 @@ $(function() {
                 $("#message").text(res.message);
             },
             error: function(req, err) {
-                console.log(err);
+                $("#message").text("There was an error. Please try again later.");
             },
             // Form data
             data: formData,

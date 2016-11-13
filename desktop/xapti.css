@@ -18,6 +18,9 @@ body {
 .title * {
     vertical-align: middle;
 }
+#message {
+    text-align: center;
+}
 input[type="text"], input[type="number"], input[type="password"], input[type="email"] {
     height: 30px;
     font-size: 12px;
