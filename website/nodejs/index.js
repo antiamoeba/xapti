@@ -187,7 +187,7 @@ db.once('open', function() {
 
     app.use(express.static('../frontend'));
 
-    app.listen(3000, function () {
+    app.listen(process.env.PORT || 3000, function () {
         console.log('Xapti listening on port 3000!');
     });
 });
