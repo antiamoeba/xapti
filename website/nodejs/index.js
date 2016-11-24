@@ -11,13 +11,13 @@ var fs = require('fs');
 var handlebars = require('handlebars');
 var uploadHtml;
 var downloadTemplate;
-fs.readFile('../frontend/upload.html', 'utf8', function(err, html) {
+fs.readFile('upload.html', 'utf8', function(err, html) {
     if (err) {
         console.log(err);
     }
     uploadHtml = html;
 });
-fs.readFile('../frontend/download.html', 'utf8', function(err, html) {
+fs.readFile('download.html', 'utf8', function(err, html) {
     if (err) {
         console.log(err);
     }
@@ -185,7 +185,7 @@ db.once('open', function() {
         res.send(uploadHtml)
     });
 
-    app.use(express.static('../frontend'));
+    app.use(express.static('frontend'));
 
     app.listen(process.env.PORT || 3000, function () {
         console.log('Xapti listening on port 3000!');
